@@ -1,0 +1,13 @@
+extends layout 
+
+block content 
+    h1 The Recommendations Page!
+    each roast in roasts
+        div.row
+            h2 #{roast.type}
+            div.col
+                h3 Common Names
+                ul 
+                    each name in roast.names
+                        li #{name}
+                <hr>
